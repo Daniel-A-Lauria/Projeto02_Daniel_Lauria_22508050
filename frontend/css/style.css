@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(/frontend/background.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.logo{
+    color: white;
+    background: #2E2E2E;
+    border-radius: 8px;
+    flex: 1 1 280px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: #2E2E2E;
+    border-radius: 8px;
+    padding: 20px;
+    border-top: 16px solid red;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    flex: 1 1 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card.status-pendente {
+  border-top-color: yellow; 
+}
+
+.card.status-em-transito {
+  border-top-color: lightblue; 
+}
+
+.card.status-entregue {
+  border-top-color: greenyellow; 
+}
+.cep-container { 
+    display: flex; 
+    gap: 8px; 
+}
+
+.destinatario-container {
+    display: flex;
+    gap: 8px; 
+}
+    
+.cep-container input { 
+    flex: 1; 
+}
+
+.destinatario-container input { 
+    flex: 1; 
+}
+
+button {
+    padding: 8px 16px;
+    background: red;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+    
+button:disabled { 
+    background: darkred; 
+    cursor: not-allowed; 
+}
+
+h1{
+     font-size: 1.3rem; 
+     color: #fff;
+     margin-bottom: 4px; 
+}
+
+label { 
+    font-size: 1.2rem; 
+    font-weight: 600; 
+    color: #fff; 
+}
+
+.login-container {
+    max-width: 420px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.login-container h2 {
+    margin-bottom: 8px;
+}
+
+.login-container p {
+    color: #cccccc;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.login-container input,
+.container input,
+.container select {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background: #1f1f1f;
+    color: white;
+    margin-top: 4px;
+}
+
+@media (max-width: 850px) {
+    .logo {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.usuario-logado {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: greenyellow;
+}
